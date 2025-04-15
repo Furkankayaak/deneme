@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-logo">
+            <a href="index.html">YourApp LOGO</a>
+        </div>
+        <nav class="dashboard-nav">
+            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a> <!-- Active class -->
+            <a href="index.html" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main fade-in">
+        <h1>Settings</h1>
+
+        <div class="settings-section glass-container" id="account-settings">
+            <h2><i class="fas fa-user-edit"></i> Account Information</h2>
+            <form action="#"> <!-- Needs backend -->
+                <div class="form-group">
+                    <label for="setting-name">Full Name:</label>
+                    <input type="text" id="setting-name" name="setting-name" value="x y">
+                </div>
+                <div class="form-group">
+                    <label for="setting-email">Email Address:</label>
+                    <input type="email" id="setting-email" name="setting-email" value="x@gmail.com">
+                </div>
+                 <div class="form-group">
+                    <label for="setting-location">Location:</label>
+                    <input type="text" id="setting-location" name="setting-location" value="Antalya">
+                </div>
+                 <div class="form-group">
+                    <label for="setting-website">Website:</label>
+                    <input type="url" id="setting-website" name="setting-website" value="https://myportfolio.com">
+                </div>
+                <button type="submit" class="btn">Save Account Changes</button>
+            </form>
+        </div>
+
+        <div class="settings-section glass-container" id="security-settings">
+             <h2><i class="fas fa-shield-alt"></i> Security</h2>
+             <form action="#"> <!-- Needs backend -->
+                 <div class="form-group">
+                    <label for="setting-current-password">Current Password:</label>
+                    <input type="password" id="setting-current-password" name="setting-current-password">
+                 </div>
+                 <div class="form-group">
+                    <label for="setting-new-password">New Password:</label>
+                    <input type="password" id="setting-new-password" name="setting-new-password">
+                 </div>
+                 <div class="form-group">
+                    <label for="setting-confirm-password">Confirm New Password:</label>
+                    <input type="password" id="setting-confirm-password" name="setting-confirm-password">
+                 </div>
+                 <button type="submit" class="btn">Change Password</button>
+                 <hr class="settings-divider">
+                 <div class="form-group checkbox-group">
+                    <input type="checkbox" id="setting-2fa" name="setting-2fa" checked>
+                    <label for="setting-2fa">Enable Two-Factor Authentication (2FA)</label>
+                 </div>
+                 <button type="button" class="btn btn-secondary">Configure 2FA</button>
+             </form>
+        </div>
+
+         <div class="settings-section glass-container" id="notification-settings">
+            <h2><i class="fas fa-bell"></i> Notifications</h2>
+             <form action="#"> <!-- Needs backend -->
+                 <p class="form-description">Choose how you receive notifications.</p>
+                 <div class="form-group checkbox-group">
+                    <input type="checkbox" id="notify-email-message" name="notify-email-message" checked>
+                    <label for="notify-email-message">Email me for new messages</label>
+                 </div>
+                  <div class="form-group checkbox-group">
+                    <input type="checkbox" id="notify-email-mention" name="notify-email-mention" checked>
+                    <label for="notify-email-mention">Email me when mentioned</label>
+                 </div>
+                  <div class="form-group checkbox-group">
+                    <input type="checkbox" id="notify-email-updates" name="notify-email-updates">
+                    <label for="notify-email-updates">Email me about product updates</label>
+                 </div>
+                  <div class="form-group checkbox-group">
+                    <input type="checkbox" id="notify-push" name="notify-push" checked>
+                    <label for="notify-push">Enable push notifications</label>
+                 </div>
+                 <button type="submit" class="btn">Save Notification Preferences</button>
+             </form>
+        </div>
+
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>© 2023 YourAppName. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

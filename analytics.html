@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-logo">
+            <a href="index.html">YourApp LOGO</a>
+        </div>
+        <nav class="dashboard-nav">
+             <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            <a href="index.html" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main fade-in">
+        <h1><i class="fas fa-chart-pie"></i> Analytics Overview</h1>
+
+        <div class="analytics-controls">
+            <label for="date-range">Date Range:</label>
+            <select id="date-range">
+                <option value="7d">Last 7 Days</option>
+                <option value="30d" selected>Last 30 Days</option>
+                <option value="90d">Last 90 Days</option>
+                <option value="custom">Custom Range</option>
+            </select>
+            <!-- Add date inputs for custom range if needed -->
+        </div>
+
+        <section class="dashboard-widgets analytics-stats">
+             <div class="widget-card stat-card">
+                 <i class="fas fa-eye widget-icon"></i>
+                 <h3>Profile Views</h3>
+                 <p class="stat-number">1,284</p>
+                 <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 15%</span>
+             </div>
+             <div class="widget-card stat-card">
+                 <i class="fas fa-thumbs-up widget-icon"></i>
+                 <h3>Content Likes</h3>
+                 <p class="stat-number">356</p>
+                 <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 8%</span>
+             </div>
+              <div class="widget-card stat-card">
+                 <i class="fas fa-users widget-icon"></i>
+                 <h3>New Followers</h3>
+                 <p class="stat-number">42</p>
+                  <span class="stat-change negative"><i class="fas fa-arrow-down"></i> 5%</span>
+             </div>
+             <div class="widget-card stat-card">
+                 <i class="fas fa-comments widget-icon"></i>
+                 <h3>Comments Received</h3>
+                 <p class="stat-number">98</p>
+                 <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 22%</span>
+             </div>
+        </section>
+
+        <section class="analytics-charts">
+            <div class="chart-container glass-container">
+                <h3>Activity Over Time (Placeholder)</h3>
+                <div class="chart-placeholder">Chart Area</div>
+            </div>
+            <div class="chart-container glass-container">
+                <h3>Engagement Breakdown (Placeholder)</h3>
+                 <div class="chart-placeholder">Pie Chart Area</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>© 2023 YourAppName. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

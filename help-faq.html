@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & FAQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-logo">
+            <a href="index.html">YourApp LOGO</a>
+        </div>
+        <nav class="dashboard-nav">
+             <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            <a href="index.html" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main fade-in">
+        <h1><i class="fas fa-question-circle"></i> Help & Frequently Asked Questions</h1>
+
+        <div class="help-search">
+             <input type="search" placeholder="Search help topics..." class="resource-search"> <!-- Reuse search style -->
+        </div>
+
+        <section class="faq-section">
+            <h2>Getting Started</h2>
+            <div class="faq-item glass-container">
+                <button class="faq-question">
+                    How do I create my first project? <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Navigate to the "My Projects" page using the link (if added to nav) or dashboard widget. Click the "Add New Project" button and fill in the required details like project name, description, and initial status.</p>
+                </div>
+            </div>
+             <div class="faq-item glass-container">
+                <button class="faq-question">
+                    How do I update my profile information? <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Click on "Profile" in the header navigation, then click the "Edit Profile" button. Alternatively, go to "Settings" > "Account Information" to update your details.</p>
+                </div>
+            </div>
+             <!-- Add more Getting Started FAQs -->
+        </section>
+
+         <section class="faq-section">
+            <h2>Account & Billing (Example)</h2>
+            <div class="faq-item glass-container">
+                <button class="faq-question">
+                    How do I change my password? <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Go to "Settings" in the header navigation, then scroll down to the "Security" section. Enter your current password and your desired new password in the provided fields and click "Change Password".</p>
+                </div>
+            </div>
+             <div class="faq-item glass-container">
+                <button class="faq-question">
+                    Where can I find my invoices? <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>(Placeholder) In a future update, a "Billing" section will be added under Settings where you can manage your subscription and view past invoices.</p>
+                </div>
+            </div>
+             <!-- Add more Account FAQs -->
+        </section>
+
+        <section class="support-contact glass-container">
+             <h2>Still Need Help?</h2>
+             <p>If you can't find the answer you're looking for, please contact our support team.</p>
+             <a href="mailto:support@yourappname.com" class="btn"><i class="fas fa-envelope"></i> Contact Support</a>
+             <!-- Optionally add a phone number or link to a contact form page -->
+        </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+        <nav class="footer-nav">
+             <a href="help-faq.html">Help & FAQ</a>
+             <a href="terms-of-service.html">Terms of Service</a>
+             <a href="privacy-policy.html">Privacy Policy</a>
+         </nav>
+        <p>© 2023 YourAppName. All rights reserved.</p>
+    </footer>
+
+    <!-- Basic JS for FAQ Accordion -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    const icon = button.querySelector('i');
+
+                    // Toggle active class for styling/animation
+                    button.classList.toggle('active');
+                    answer.classList.toggle('active');
+
+                    // Change icon direction
+                    if (answer.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    } else {
+                        answer.style.maxHeight = null;
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

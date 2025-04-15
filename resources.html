@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources for Entrepreneurs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-logo">
+            <a href="index.html">YourApp LOGO</a>
+        </div>
+        <nav class="dashboard-nav">
+             <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            <!-- Add more links here if needed -->
+            <a href="index.html" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main fade-in">
+        <h1><i class="fas fa-book-open"></i> Entrepreneur Resources</h1>
+        <p class="dashboard-subtitle">Guides, templates, and articles to help you succeed.</p>
+
+        <div class="resources-filter">
+            <button class="btn btn-secondary active" data-filter="all">All</button>
+            <button class="btn btn-secondary" data-filter="guides">Guides</button>
+            <button class="btn btn-secondary" data-filter="templates">Templates</button>
+            <button class="btn btn-secondary" data-filter="articles">Articles</button>
+            <input type="search" placeholder="Search resources..." class="resource-search">
+        </div>
+
+         <section class="resource-grid">
+            <!-- Example Resource Card (Repeat and vary) -->
+             <div class="resource-card glass-container" data-category="guides">
+                 <img src="https://via.placeholder.com/300x150/8a4fff/ffffff?text=Guide+Cover" alt="Resource Thumbnail" class="resource-thumbnail">
+                 <div class="resource-content">
+                     <span class="resource-category guides">Guide</span>
+                     <h3>Business Plan Essentials</h3>
+                     <p>A step-by-step guide to creating a compelling business plan for investors.</p>
+                     <a href="#read-guide-1" class="btn btn-sm">Read Guide</a>
+                 </div>
+             </div>
+
+             <div class="resource-card glass-container" data-category="templates">
+                 <img src="https://via.placeholder.com/300x150/4fc3f7/ffffff?text=Template+Preview" alt="Resource Thumbnail" class="resource-thumbnail">
+                 <div class="resource-content">
+                     <span class="resource-category templates">Template</span>
+                     <h3>Pitch Deck Template</h3>
+                     <p>Downloadable template to structure your startup's pitch deck effectively.</p>
+                     <a href="#download-template-1" class="btn btn-sm"><i class="fas fa-download"></i> Download</a>
+                 </div>
+             </div>
+
+              <div class="resource-card glass-container" data-category="articles">
+                 <img src="https://via.placeholder.com/300x150/1f1f1f/ffffff?text=Article+Image" alt="Resource Thumbnail" class="resource-thumbnail">
+                 <div class="resource-content">
+                     <span class="resource-category articles">Article</span>
+                     <h3>Marketing Strategies for Startups</h3>
+                     <p>Explore cost-effective marketing tactics for early-stage businesses.</p>
+                      <a href="#read-article-1" class="btn btn-sm">Read Article</a>
+                 </div>
+             </div>
+
+             <div class="resource-card glass-container" data-category="guides">
+                 <img src="https://via.placeholder.com/300x150/8a4fff/ffffff?text=Guide+Cover" alt="Resource Thumbnail" class="resource-thumbnail">
+                 <div class="resource-content">
+                     <span class="resource-category guides">Guide</span>
+                     <h3>Understanding Venture Capital</h3>
+                     <p>Learn the basics of VC funding and how to approach investors.</p>
+                     <a href="#read-guide-2" class="btn btn-sm">Read Guide</a>
+                 </div>
+             </div>
+             <!-- Add more resource cards -->
+         </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+         <nav class="footer-nav">
+             <a href="help-faq.html">Help & FAQ</a>
+             <a href="terms-of-service.html">Terms of Service</a>
+             <a href="privacy-policy.html">Privacy Policy</a>
+         </nav>
+        <p>© 2023 YourAppName. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

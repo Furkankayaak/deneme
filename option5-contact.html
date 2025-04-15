@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="content-page-body">
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-logo">
+            <a href="index.html">YourApp LOGO</a>
+        </div>
+        <nav class="dashboard-nav">
+             <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+             <a href="signup.html" class="btn btn-secondary btn-sm">Sign Up</a>
+        </nav>
+    </header>
+
+    <main class="content-main fade-in">
+        <section class="contact-header content-section text-center">
+            <h1>Get In Touch</h1>
+            <p class="dashboard-subtitle">We'd love to hear from you. Reach out with questions, feedback, or inquiries.</p>
+        </section>
+
+        <section class="contact-content content-section">
+             <div class="container two-col-layout contact-layout">
+                 <!-- Contact Form -->
+                 <div class="contact-form-container glass-container">
+                     <h2>Send Us a Message</h2>
+                     <form action="#" id="contact-form"> <!-- Needs backend/JS handler -->
+                         <div class="form-group">
+                             <label for="contact-name">Your Name:</label>
+                             <input type="text" id="contact-name" name="name" required>
+                         </div>
+                         <div class="form-group">
+                              <label for="contact-email">Your Email:</label>
+                             <input type="email" id="contact-email" name="email" required>
+                         </div>
+                         <div class="form-group">
+                              <label for="contact-subject">Subject:</label>
+                             <input type="text" id="contact-subject" name="subject">
+                         </div>
+                         <div class="form-group">
+                              <label for="contact-message">Message:</label>
+                             <textarea id="contact-message" name="message" rows="6" required></textarea>
+                         </div>
+                         <button type="submit" class="btn">Send Message</button>
+                     </form>
+                 </div>
+
+                 <!-- Contact Info & Map -->
+                 <div class="contact-info-container">
+                     <div class="contact-info-block glass-container">
+                         <h3>Contact Information</h3>
+                         <p><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, Suite 404<br>Tech City, CA 94000</p>
+                         <p><i class="fas fa-phone"></i> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                         <p><i class="fas fa-envelope"></i> <a href="mailto:info@yourappname.com">info@yourappname.com</a></p>
+                         <p><i class="fas fa-clock"></i> Mon - Fri, 9:00 AM - 5:00 PM (PST)</p>
+                     </div>
+                      <div class="map-placeholder glass-container">
+                          <!-- Replace with actual map embed later -->
+                          <i class="fas fa-map-marked-alt"></i> Map Area Placeholder
+                     </div>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+     <footer class="dashboard-footer">
+         <nav class="footer-nav">
+             <a href="option6-about.html">About Us</a>
+             <a href="option3-blog.html">Blog</a>
+             <a href="option5-contact.html">Contact</a>
+             <a href="help-faq.html">Help & FAQ</a>
+             <a href="terms-of-service.html">Terms</a>
+             <a href="privacy-policy.html">Privacy</a>
+         </nav>
+        <p>© 2023 YourAppName. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

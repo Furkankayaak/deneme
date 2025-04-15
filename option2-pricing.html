@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="content-page-body">
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-logo">
+            <a href="index.html">YourApp LOGO</a>
+        </div>
+        <nav class="dashboard-nav">
+             <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+             <a href="signup.html" class="btn btn-secondary btn-sm">Sign Up</a>
+        </nav>
+    </header>
+
+     <main class="content-main fade-in">
+        <section class="pricing-header content-section text-center">
+            <h1>Simple, Transparent Pricing</h1>
+            <p class="dashboard-subtitle">Choose the plan that fits your business needs.</p>
+             <!-- Optional: Add monthly/annual toggle -->
+        </section>
+
+        <section class="pricing-grid content-section">
+             <div class="grid-container grid-3-col">
+                 <!-- Pricing Card 1: Free/Basic -->
+                 <div class="pricing-card glass-container">
+                     <div class="pricing-card-header">
+                         <h3>Starter</h3>
+                         <p class="pricing-tagline">For individuals getting started</p>
+                     </div>
+                     <div class="pricing-card-price">
+                         <span class="price">$0</span><span class="per-month">/ month</span>
+                     </div>
+                     <ul class="pricing-features">
+                         <li><i class="fas fa-check"></i> 1 Project</li>
+                         <li><i class="fas fa-check"></i> Basic Analytics</li>
+                         <li><i class="fas fa-check"></i> Community Access</li>
+                         <li><i class="fas fa-times"></i> Resource Hub Access</li>
+                         <li><i class="fas fa-times"></i> Direct Messaging</li>
+                     </ul>
+                     <a href="signup.html?plan=starter" class="btn btn-secondary">Get Started</a>
+                 </div>
+
+                 <!-- Pricing Card 2: Pro (Most Popular) -->
+                 <div class="pricing-card glass-container popular">
+                     <span class="popular-badge">Most Popular</span>
+                     <div class="pricing-card-header">
+                         <h3>Pro</h3>
+                         <p class="pricing-tagline">For growing businesses & teams</p>
+                     </div>
+                     <div class="pricing-card-price">
+                         <span class="price">$49</span><span class="per-month">/ month</span>
+                     </div>
+                     <ul class="pricing-features">
+                         <li><i class="fas fa-check"></i> Up to 10 Projects</li>
+                         <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                         <li><i class="fas fa-check"></i> Community Access</li>
+                         <li><i class="fas fa-check"></i> Full Resource Hub Access</li>
+                         <li><i class="fas fa-check"></i> Direct Messaging (100/mo)</li>
+                     </ul>
+                     <a href="signup.html?plan=pro" class="btn">Choose Pro</a>
+                 </div>
+
+                 <!-- Pricing Card 3: Enterprise -->
+                  <div class="pricing-card glass-container">
+                     <div class="pricing-card-header">
+                         <h3>Enterprise</h3>
+                         <p class="pricing-tagline">For large organizations</p>
+                     </div>
+                     <div class="pricing-card-price">
+                          <span class="price-contact">Contact Us</span>
+                     </div>
+                     <ul class="pricing-features">
+                         <li><i class="fas fa-check"></i> Unlimited Projects</li>
+                         <li><i class="fas fa-check"></i> Custom Analytics & Reporting</li>
+                         <li><i class="fas fa-check"></i> Dedicated Support</li>
+                         <li><i class="fas fa-check"></i> Full Resource Hub Access</li>
+                         <li><i class="fas fa-check"></i> Unlimited Messaging</li>
+                     </ul>
+                     <a href="option5-contact.html?interest=enterprise" class="btn btn-secondary">Contact Sales</a>
+                 </div>
+            </div>
+        </section>
+
+         <section class="pricing-faq content-section">
+            <h2>Frequently Asked Questions</h2>
+             <div class="faq-item glass-container">
+                 <button class="faq-question">Is there a free trial? <i class="fas fa-chevron-down"></i></button>
+                 <div class="faq-answer"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. The Starter plan is free forever for basic use.</p></div>
+             </div>
+             <div class="faq-item glass-container">
+                 <button class="faq-question">Can I change plans later? <i class="fas fa-chevron-down"></i></button>
+                 <div class="faq-answer"><p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Yes, you can upgrade or downgrade your plan at any time from your account settings.</p></div>
+             </div>
+              <!-- Add more pricing FAQs -->
+         </section>
+
+    </main>
+
+     <footer class="dashboard-footer">
+         <nav class="footer-nav">
+             <a href="option6-about.html">About Us</a>
+             <a href="option3-blog.html">Blog</a>
+             <a href="option5-contact.html">Contact</a>
+             <a href="help-faq.html">Help & FAQ</a>
+             <a href="terms-of-service.html">Terms</a>
+             <a href="privacy-policy.html">Privacy</a>
+         </nav>
+        <p>© 2023 YourAppName. All rights reserved.</p>
+    </footer>
+
+     <!-- Include FAQ JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(button => { /* ... same FAQ accordion JS as help-faq.html ... */
+                 button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling; const icon = button.querySelector('i');
+                    button.classList.toggle('active'); answer.classList.toggle('active');
+                    if (answer.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px"; icon.classList.replace('fa-chevron-down','fa-chevron-up');
+                    } else {
+                        answer.style.maxHeight = null; icon.classList.replace('fa-chevron-up','fa-chevron-down');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

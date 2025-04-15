@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body"> <!-- Reuse dashboard body class -->
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-logo">
+            <a href="index.html">Teknopark LOGO</a>
+        </div>
+        <nav class="dashboard-nav">
+            <a href="profile.html" class="active"><i class="fas fa-user"></i> Profil</a> <!-- Add 'active' class -->
+            <a href="settings.html"><i class="fas fa-cog"></i> Ayarlar</a>
+            <a href="index.html" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Çıkış Yap!</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main fade-in">
+        <h1>My Profile</h1>
+        <div class="profile-container glass-container">
+            <div class="profile-header">
+                <img src="https://via.placeholder.com/150" alt="User Avatar" class="profile-avatar">
+                <div class="profile-header-info">
+                     <h2>Alex Thompson</h2> <!-- Placeholder Name -->
+                     <p class="profile-email">x@gmail.com</p>
+                     <span class="profile-status"><i class="fas fa-circle online"></i> Online</span>
+                </div>
+                 <a href="settings.html#account-settings" class="btn btn-secondary btn-edit-profile">
+                    <i class="fas fa-pencil-alt"></i> Edit Profile
+                </a>
+            </div>
+            <hr class="profile-divider">
+            <div class="profile-details">
+                <h3>About Me</h3>
+                <p>Web developer with a passion for creating intuitive user interfaces and exploring new technologies. Coffee enthusiast and avid reader.</p>
+
+                <h3>Details</h3>
+                <dl class="profile-details-list">
+                    <dt><i class="fas fa-map-marker-alt"></i> Location</dt>
+                    <dd>San Francisco, CA</dd>
+                    <dt><i class="fas fa-calendar-alt"></i> Joined</dt>
+                    <dd>January 15, 2023</dd>
+                    <dt><i class="fas fa-link"></i> Website</dt>
+                    <dd><a href="#" target="_blank">myportfolio.com</a></dd>
+                     <dt><i class="fab fa-github"></i> Github</dt>
+                    <dd><a href="#" target="_blank">github.com/alexthompson</a></dd>
+                </dl>
+            </div>
+        </div>
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>© 2023 YourAppName. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

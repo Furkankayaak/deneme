@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-logo">
+            <a href="index.html">YourApp LOGO</a>
+        </div>
+        <nav class="dashboard-nav">
+             <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            <!-- Add more links here if needed -->
+            <a href="index.html" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main fade-in">
+        <h1><i class="fas fa-project-diagram"></i> My Projects / Ventures</h1>
+        <p class="dashboard-subtitle">Overview of your current business projects.</p>
+
+        <div class="projects-actions">
+            <button class="btn"><i class="fas fa-plus"></i> Add New Project</button>
+            <select id="project-sort">
+                <option value="recent">Sort by: Most Recent</option>
+                <option value="name">Sort by: Name A-Z</option>
+                <option value="status">Sort by: Status</option>
+            </select>
+        </div>
+
+        <section class="project-list">
+            <!-- Example Project Item (Repeat) -->
+            <div class="project-item glass-container">
+                <div class="project-header">
+                    <h3>Project Alpha (Innovate Solutions Inc.)</h3>
+                    <span class="project-status status-active">Active</span>
+                </div>
+                <p class="project-description">Developing a new SaaS platform for task management targeting remote teams.</p>
+                <div class="project-details">
+                    <span><i class="fas fa-users"></i> Team Size: 5</span>
+                    <span><i class="fas fa-calendar-alt"></i> Started: Jan 2023</span>
+                    <span><i class="fas fa-tasks"></i> Next Milestone: Beta Launch</span>
+                </div>
+                <div class="project-item-actions">
+                    <a href="#view-project-1" class="btn btn-secondary btn-sm">View Details</a>
+                    <a href="#edit-project-1" class="btn btn-secondary btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>
+                </div>
+            </div>
+
+             <div class="project-item glass-container">
+                <div class="project-header">
+                    <h3>EcoGrow Initiative (Side Venture)</h3>
+                    <span class="project-status status-planning">Planning</span>
+                </div>
+                <p class="project-description">Researching sustainable packaging options for local food businesses.</p>
+                 <div class="project-details">
+                    <span><i class="fas fa-user"></i> Team Size: 1</span>
+                    <span><i class="fas fa-calendar-alt"></i> Started: Mar 2023</span>
+                    <span><i class="fas fa-tasks"></i> Next Milestone: Market Research</span>
+                </div>
+                 <div class="project-item-actions">
+                    <a href="#view-project-2" class="btn btn-secondary btn-sm">View Details</a>
+                    <a href="#edit-project-2" class="btn btn-secondary btn-sm"><i class="fas fa-pencil-alt"></i> Edit</a>
+                </div>
+            </div>
+
+             <div class="project-item glass-container">
+                <div class="project-header">
+                    <h3>Client Portal Upgrade (Innovate Solutions Inc.)</h3>
+                     <span class="project-status status-completed">Completed</span>
+                </div>
+                <p class="project-description">Redesigned and launched the updated client access portal.</p>
+                 <div class="project-details">
+                    <span><i class="fas fa-users"></i> Team Size: 3</span>
+                    <span><i class="fas fa-calendar-alt"></i> Completed: Dec 2022</span>
+                    <span><i class="fas fa-check-circle"></i> Status: Launched</span>
+                </div>
+                 <div class="project-item-actions">
+                    <a href="#view-project-3" class="btn btn-secondary btn-sm">View Details</a>
+                     <!-- Maybe no edit for completed? -->
+                </div>
+            </div>
+            <!-- Add more project items -->
+        </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+        <nav class="footer-nav">
+             <a href="help-faq.html">Help & FAQ</a>
+             <a href="terms-of-service.html">Terms of Service</a>
+             <a href="privacy-policy.html">Privacy Policy</a>
+         </nav>
+        <p>© 2023 YourAppName. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

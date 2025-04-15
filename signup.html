@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Create Your Account</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="form-page-body"> <!-- Use common body class -->
+
+    <main class="centered-form-main fade-in">
+        <div class="glass-container signup-form-standalone"> <!-- Specific class for standalone signup -->
+            <h2>Create Your Entrepreneur Account</h2>
+            <p class="form-description">
+                Join our platform to connect, grow, and manage your business ventures.
+            </p>
+            <!-- In a real app, this form would submit to a backend -->
+            <form action="dashboard.html" method="GET"> <!-- Redirect to dashboard after signup for demo -->
+                <div class="form-group">
+                    <label for="fullname"><i class="fas fa-user-tie icon-left"></i> İsim Soyisim:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="İsim Soyisim" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyname"><i class="fas fa-building icon-left"></i> Firma / Firma Adı:</label>
+                    <input type="text" id="companyname" name="companyname" placeholder="Örneğin, Innovate Solutions Inc." required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope icon-left"></i> İş Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Mail Adresin" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock icon-left"></i> Şifre:</label>
+                    <input type="password" id="password" name="password" placeholder="Güçlü bir şifre belirle!" required>
+                     <!-- Optional: Add password confirmation field -->
+                     <!-- <label for="confirm-password" style="margin-top: 10px;"><i class="fas fa-check-circle icon-left"></i> Confirm Password:</label>
+                     <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required> -->
+                </div>
+
+                 <!-- Hidden input to pass username to dashboard (use 'fullname' for now) -->
+                 <input type="hidden" id="hidden-username" name="username">
+
+                <div class="form-group checkbox-group terms-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#terms-link" target="_blank">Terms of Service</a> and <a href="#privacy-link" target="_blank">Privacy Policy</a>.</label>
+                </div>
+
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+            <div class="form-links">
+                 <a href="login.html" class="back-link">Already have an account? Log In</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Simple JS to copy fullname to hidden username field for dashboard demo -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form');
+            const fullnameInput = document.getElementById('fullname');
+            const hiddenUsernameInput = document.getElementById('hidden-username');
+
+            if(form && fullnameInput && hiddenUsernameInput) {
+                form.addEventListener('submit', () => {
+                    // Extract first name or use full name as username for demo
+                    const nameParts = fullnameInput.value.split(' ');
+                    hiddenUsernameInput.value = nameParts[0] || fullnameInput.value; // Use first name if available
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

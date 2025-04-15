@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- For icons -->
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-logo">
+            <a href="index.html">YourApp LOGO</a>
+        </div>
+        <nav class="dashboard-nav">
+            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            <a href="index.html" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main fade-in">
+        <!-- **** MODIFIED H1 **** -->
+        <h1 id="welcome-message">Welcome Back!</h1>
+        <!-- ********************* -->
+        <p class="dashboard-subtitle">Here's a quick overview of your space.</p>
+
+        <section class="dashboard-widgets">
+            <div class="widget-card">
+                <i class="fas fa-chart-line widget-icon"></i>
+                <h3>Analytics</h3>
+                <p>View your recent activity and statistics.</p>
+                <!-- **** UPDATED LINK **** -->
+                <a href="analytics.html" class="btn btn-secondary">View Details</a>
+            </div>
+            <div class="widget-card">
+                <i class="fas fa-envelope widget-icon"></i>
+                <h3>Messages</h3>
+                <p>You have 3 unread messages.</p>
+                 <!-- **** UPDATED LINK **** -->
+                 <a href="messages.html" class="btn btn-secondary">Go to Inbox</a>
+            </div>
+            <div class="widget-card">
+                <i class="fas fa-cog widget-icon"></i>
+                <h3>Account Settings</h3>
+                <p>Manage your profile and preferences.</p>
+                 <!-- **** UPDATED LINK **** -->
+                 <a href="settings.html" class="btn btn-secondary">Update Settings</a>
+            </div>
+             <div class="widget-card">
+                <i class="fas fa-users widget-icon"></i>
+                <h3>Community</h3>
+                <p>Connect with other users.</p>
+                 <!-- **** UPDATED LINK **** -->
+                 <a href="community.html" class="btn btn-secondary">Explore</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>© 2023 YourAppName. All rights reserved.</p>
+    </footer>
+
+    <!-- **** ADDED JAVASCRIPT **** -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const welcomeElement = document.getElementById('welcome-message');
+            if (welcomeElement) {
+                // Get URL parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const username = urlParams.get('username'); // Get 'username' from ?username=...
+
+                if (username) {
+                    // Basic sanitization (remove potential HTML tags)
+                    const safeUsername = username.replace(/</g, "<").replace(/>/g, ">");
+                    welcomeElement.textContent = `Welcome ${safeUsername}!`;
+                } else {
+                    // Keep default or set a generic one if param is missing
+                    welcomeElement.textContent = 'Welcome!';
+                }
+            }
+        });
+    </script>
+    <!-- ************************** -->
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-logo">
+            <a href="index.html">YourApp LOGO</a>
+        </div>
+        <nav class="dashboard-nav">
+            <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+            <a href="settings.html"><i class="fas fa-cog"></i> Ayarlar</a>
+            <a href="index.html" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Çıkış Yap!</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main fade-in">
+        <h1><i class="fas fa-inbox"></i> Inbox</h1>
+
+        <div class="messages-container glass-container">
+             <div class="messages-actions">
+                <button class="btn"><i class="fas fa-pencil-alt"></i> Compose New</button>
+                <input type="search" placeholder="Search messages..." class="message-search">
+             </div>
+             <ul class="message-list">
+                <li class="message-item unread">
+                    <div class="message-sender">
+                        <img src="https://via.placeholder.com/40" alt="Sender Avatar">
+                        <span>Fatih Mehmet ÇETİN</span>
+                    </div>
+                    <div class="message-subject">Project Update & Next Steps</span></div>
+                    <div class="message-preview">Hey Alex, just wanted to follow up on our call...</div>
+                    <div class="message-date">10:30 AM</div>
+                </li>
+                 <li class="message-item unread">
+                    <div class="message-sender">
+                        <img src="https://via.placeholder.com/40" alt="Sender Avatar">
+                        <span>Melih Koçyiğit
+                        </span>
+                    </div>
+                    <div class="message-subject">Welcome to the Community!</span></div>
+                    <div class="message-preview">We're excited to have you join us. Here are...</div>
+                    <div class="message-date">9:15 AM</div>
+                </li>
+                 <li class="message-item">
+                    <div class="message-sender">
+                        <img src="https://via.placeholder.com/40" alt="Sender Avatar">
+                        <span>Nesrin Çelik Gülay</span>
+                    </div>
+                    <div class="message-subject">Meeting Request: Design Review</span></div>
+                    <div class="message-preview">Hi Alex, can we schedule a quick meeting to...</div>
+                    <div class="message-date">Yesterday</div>
+                </li>
+                <li class="message-item">
+                    <div class="message-sender">
+                        <img src="https://via.placeholder.com/40" alt="Sender Avatar">
+                        <span>System Notification</span>
+                    </div>
+                    <div class="message-subject">Password Successfully Changed</span></div>
+                    <div class="message-preview">Your password was updated on [Date]...</div>
+                    <div class="message-date">Jan 20</div>
+                </li>
+                 <!-- Add more message items -->
+             </ul>
+        </div>
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>© 2023 Teknopark. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
